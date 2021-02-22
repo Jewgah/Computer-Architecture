@@ -1,0 +1,15 @@
+//File name: Or3Way.hdl
+
+/**
+*Computes Or on 3 bits
+*Out = 1 if (a==1 or b==1 or c==1)
+*/
+
+CHIP Or3Way{
+	IN a,b,c;
+	OUT out;
+
+	PARTS:
+	Or(a=a,b=b,out=temp);
+	Or(a=c,b=temp,out=out);
+}
